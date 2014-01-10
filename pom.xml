@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (c) 2012, Everit Kft.
+
+    All rights reserved.
+
+    This library is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Lesser General Public
+    License as published by the Free Software Foundation; either
+    version 3 of the License, or (at your option) any later version.
+
+    This library is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public
+    License along with this library; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+    MA 02110-1301  USA
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<!-- Delete! -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.everit</groupId>
+    <artifactId>conventions</artifactId>
+    <version>8</version>
+
+    <name>Everit Development Conventions</name>
+    <description>A set of configuration files that can be used during development. Configuration files also used to check code quality during the Contiuous Integration process.</description>
+
+    <properties>
+        <everit.public.site.url>http://everit.org</everit.public.site.url>
+        <project.inceptionYear>2012</project.inceptionYear>
+    </properties>
+
+    <url>${everit.public.site.url}/${project.artifactId}</url>
+
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-webdav-jackrabbit</artifactId>
+                <version>2.2</version>
+            </extension>
+        </extensions>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.2.2</version>
+            </plugin>
+            <plugin>
+                <groupId>com.mycila.maven-license-plugin</groupId>
+                <artifactId>maven-license-plugin</artifactId>
+                <version>1.9.0</version>
+                <executions>
+                    <execution>
+                        <id>check-license</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <header>/licenses/lgpl-short.txt</header>
+                    <properties>
+                        <owner>Everit Kft.</owner>
+                        <year>${project.inceptionYear}</year>
+                    </properties>
+                    <failIfMissing>true</failIfMissing>
+                    <useDefaultMapping>true</useDefaultMapping>
+                    <useDefaultExcludes>false</useDefaultExcludes>
+                    <strictCheck>true</strictCheck>
+                    <skipExistingHeaders>true</skipExistingHeaders>
+                    <aggregate>true</aggregate>
+                    <excludes>
+                        <exclude>**/target/**</exclude>
+                        <exclude>**/.project</exclude>
+                        <exclude>**/.classpath</exclude>
+                        <exclude>**/.checkstyle</exclude>
+                        <exclude>**/.settings/**</exclude>
+                        <exclude>**/.svn/**</exclude>
+                        <exclude>**/pom.xml.tag</exclude>
+                        <exclude>**/pom.xml.releaseBackup</exclude>
+                        <exclude>**/release.properties</exclude>
+                        <exclude>**/*.vm</exclude>
+                        <exclude>**/LICENSE.txt</exclude>
+                        <exclude>**/*.png</exclude>
+                        <exclude>**/*.gif</exclude>
+                        <exclude>**/WebContent/**</exclude>
+                        <exclude>**/3rdparty/**</exclude>
+                        <exclude>**/MANIFEST.MF</exclude>
+                        <exclude>**/build.properties</exclude>
+                        <exclude>**/lgpl-*.txt</exclude>
+                    </excludes>
+                    <mapping>
+                        <java>EVERIT_JAVA_STYLE</java>
+                        <groovy>JAVADOC_STYLE</groovy>
+                        <js>JAVADOC_STYLE</js>
+                        <css>JAVADOC_STYLE</css>
+                        <xml>XML_STYLE</xml>
+                        <dtd>XML_STYLE</dtd>
+                        <xsd>XML_STYLE</xsd>
+                        <html>XML_STYLE</html>
+                        <htm>XML_STYLE</htm>
+                        <xsl>XML_STYLE</xsl>
+                        <fml>XML_STYLE</fml>
+                        <apt>DOUBLETILDE_STYLE</apt>
+                        <properties>SCRIPT_STYLE</properties>
+                        <ini>SCRIPT_STYLE</ini>
+                        <sh>SCRIPT_STYLE</sh>
+                        <txt>TEXT</txt>
+                        <bat>BATCH</bat>
+                        <cmd>BATCH</cmd>
+                        <sql>DOUBLEDASHES_STYLE</sql>
+                        <jsp>DYNASCRIPT_STYLE</jsp>
+                        <ftl>FTL</ftl>
+                        <xhtml>XML_STYLE</xhtml>
+                        <vm>SHARPSTAR_STYLE</vm>
+                        <jspx>XML_STYLE</jspx>
+                    </mapping>
+                    <headerDefinitions>
+                        <headerDefinition>/licenseHeaderDefinitions/everit-java-style.xml</headerDefinition>
+                    </headerDefinitions>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.everit</groupId>
+                        <artifactId>conventions</artifactId>
+                        <version>${project.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+
+    <scm>
+        <connection>scm:svn:https://source.everit.biz/svn/everit-conventions/trunk</connection>
+        <developerConnection>scm:svn:https://source.everit.biz/svn/everit-conventions/trunk</developerConnection>
+        <url>https://guest:guest@source.everit.biz/viewvc/everit-conventions/trunk</url>
+    </scm>
+
+    <organization>
+        <name>Everit Kft.</name>
+        <url>https://www.everit.biz</url>
+    </organization>
+
+    <ciManagement>
+        <system>Jenkins</system>
+        <url>https://ci.everit.biz/jenkins/job/everit-conventions/</url>
+    </ciManagement>
+
+    <licenses>
+        <license>
+            <name>GNU Lesser General Public License v3.0</name>
+            <url>http://www.gnu.org/licenses/lgpl-3.0.txt</url>
+        </license>
+    </licenses>
+
+    <distributionManagement>
+        <site>
+            <id>projects.everit.biz</id>
+            <url>dav:${project.url}</url>
+        </site>
+        <repository>
+            <id>everit.public.releases</id>
+            <name>Everit Public Repository</name>
+            <url>https://repository.everit.biz/nexus/content/repositories/public-releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>everit.public.snapshots</id>
+            <name>Everit Public Snapshot Repository</name>
+            <url>https://repository.everit.biz/nexus/content/repositories/public-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>everit.groups.public</id>
+            <name>Everit Public Repository Group</name>
+            <url>http://repository.everit.biz/nexus/content/groups/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>everit.groups.proxy</id>
+            <name>Everit Proxy Repository Group</name>
+            <url>http://repository.everit.biz/nexus/content/groups/proxy</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>apache.snapshots</id>
+            <name>Apache snapshot repository</name>
+            <url>http://repository.apache.org/snapshots/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>everit.groups.public</id>
+            <name>Everit Public Repository Group</name>
+            <url>http://repository.everit.biz/nexus/content/groups/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>everit.groups.proxy</id>
+            <name>Everit Proxy Repository Group</name>
+            <url>http://repository.everit.biz/nexus/content/groups/proxy</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+</project>
