@@ -47,8 +47,8 @@
   </licenses>
 
   <scm>
-    <connection>scm:git:git://github.com/everit-org/coding-conventions.git</connection>
-    <developerConnection>scm:git:git://github.com/everit-org/coding-conventions.git</developerConnection>
+    <connection>scm:git:https://github.com/everit-org/coding-conventions.git</connection>
+    <developerConnection>scm:git:https://github.com/everit-org/coding-conventions.git</developerConnection>
     <url>https://github.com/everit-org/coding-conventions</url>
   </scm>
 
@@ -83,4 +83,17 @@
       </plugin>
     </plugins>
   </build>
+
+  <distributionManagement>
+    <repository>
+      <id>everit.public.releases</id>
+      <name>Everit Public Repository</name>
+      <url>https://repo.everit.biz/artifactory/public-release</url>
+    </repository>
+    <snapshotRepository>
+      <id>everit.public.snapshots</id>
+      <name>Everit Public Snapshot Repository</name>
+      <url>https://repo.everit.biz/artifactory/public-snapshot</url>
+    </snapshotRepository>
+  </distributionManagement>
 </project>
