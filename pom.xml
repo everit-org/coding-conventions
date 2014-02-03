@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    This file is part of Everit Coding Conventions.
+    Copyright (c) 2011, Everit Kft.
 
-    Everit Coding Conventions is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Lesser General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
+    All rights reserved.
 
-    Everit Coding Conventions is distributed in the hope that it will be useful,
+    This library is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Lesser General Public
+    License as published by the Free Software Foundation; either
+    version 3 of the License, or (at your option) any later version.
+
+    This library is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Lesser General Public License for more details.
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    Lesser General Public License for more details.
 
-    You should have received a copy of the GNU Lesser General Public License
-    along with Everit Coding Conventions.  If not, see <http://www.gnu.org/licenses/>.
+    You should have received a copy of the GNU Lesser General Public
+    License along with this library; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+    MA 02110-1301  USA
 
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -65,11 +69,22 @@
         <artifactId>license-maven-plugin</artifactId>
         <version>2.5</version>
         <configuration>
-          <header>/com/mycila/maven/plugin/license/templates/LGPL-3.txt</header>
+          <header>/licenses/lgpl-short.txt</header>
+          <properties>
+            <owner>Everit Kft.</owner>
+            <year>${project.inceptionYear}</year>
+          </properties>
+          <failIfMissing>true</failIfMissing>
+          <useDefaultMapping>true</useDefaultMapping>
+          <useDefaultExcludes>true</useDefaultExcludes>
+          <strictCheck>true</strictCheck>
+          <skipExistingHeaders>true</skipExistingHeaders>
           <excludes>
             <exclude>LICENSE</exclude>
           </excludes>
-          <skipExistingHeaders>true</skipExistingHeaders>
+          <headerDefinitions>
+            <headerDefinition>/licenseHeaderDefinitions/everit-java-style.xml</headerDefinition>
+          </headerDefinitions>
         </configuration>
         <executions>
           <execution>
@@ -90,10 +105,5 @@
       <name>Everit Public Repository</name>
       <url>https://repo.everit.biz/artifactory/public-release</url>
     </repository>
-    <snapshotRepository>
-      <id>everit.public.snapshots</id>
-      <name>Everit Public Snapshot Repository</name>
-      <url>https://repo.everit.biz/artifactory/public-snapshot</url>
-    </snapshotRepository>
   </distributionManagement>
 </project>
