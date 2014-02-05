@@ -57,6 +57,12 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
 
+  <developers>
+    <developer>
+      <name>Everit Team</name>
+    </developer>
+  </developers>
+
   <build>
     <plugins>
       <plugin>
@@ -66,14 +72,10 @@
         <version>2.5</version>
         <configuration>
           <header>/com/mycila/maven/plugin/license/templates/LGPL-3.txt</header>
-          <failIfMissing>true</failIfMissing>
-          <useDefaultMapping>true</useDefaultMapping>
-          <useDefaultExcludes>true</useDefaultExcludes>
-          <strictCheck>true</strictCheck>
-          <skipExistingHeaders>true</skipExistingHeaders>
           <excludes>
             <exclude>LICENSE</exclude>
           </excludes>
+          <skipExistingHeaders>true</skipExistingHeaders>
         </configuration>
         <executions>
           <execution>
@@ -94,5 +96,10 @@
       <name>Everit Public Repository</name>
       <url>https://repo.everit.biz/artifactory/public-release</url>
     </repository>
+    <snapshotRepository>
+      <id>everit.public.snapshots</id>
+      <name>Everit Public Snapshot Repository</name>
+      <url>https://repo.everit.biz/artifactory/public-snapshot</url>
+    </snapshotRepository>
   </distributionManagement>
 </project>
