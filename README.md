@@ -27,7 +27,7 @@ Projects without dedicated API like plugins, support or helper projects, configu
 
 ### Type #2
 
-Projects with API and implementation stored at least two repositories:
+Projects with different versioning lifecycle should be stored in separate repositories. E.g. API and implementation projects:
  - one with ending "-api" for the API part,
  - one with ending "-ri" for the implementation, in case of "ri" it means "Reference Implementation"
 
@@ -90,4 +90,3 @@ In case of an Open Source project the newest version of the "org.everit.config.o
 
  - The java package in a Maven artifact must match the artifactId.
  - Internal packages that are not exported as OSGi package must named "...inetrnal".
-
