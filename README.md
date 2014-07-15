@@ -56,10 +56,10 @@ In case of an Open Source project, the groupId must start with "org.everit...". 
 
 ### ArtifactId
 
-The artifactId must start with groupId and must be followed with the name of the repository (replacing all '-' with '.'). In case of API projects the "api" ending in the artifactId is unnecessary and not recommended.
+The artifactId must start with groupId and must be followed with the name of the repository (replacing all '-' with '.').
 
 E.g.:
- - org.everit.osgi.resource
+ - org.everit.osgi.resource.api
  - org.everit.osgi.resource.ri
  - org.everit.osgi.resource.ext
 
@@ -88,5 +88,5 @@ In case of an Open Source project the newest version of the "org.everit.config.o
 
 # Java package
 
- - The java package in a Maven artifact must match the artifactId.
+ - The java package in a Maven artifact must match the artifactId. In case of API projects the "api" ending in the package is unnecessary and not recommended.
  - Internal packages that are not exported as OSGi package must named "...inetrnal".
