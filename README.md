@@ -89,9 +89,9 @@ In case of an Open Source project the newest version of the "org.everit.config.o
 # Java version
 
 The lowest supported Java version is 1.6. Using higher versions of Java (1.7 and 1.8) is possible if:
- - the code will be more readable,
- - the code will be clearer,
- - the performance will be higher,
+ - the code is more readable,
+ - the code is clearer,
+ - the performance is higher,
  - etc.
 
 Using higher version of Java without specific reason is not recommended.
