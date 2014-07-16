@@ -86,6 +86,16 @@ In case of an Open Source project the newest version of the "org.everit.config.o
  - the parent of the tests project is the project's parent POM
  - the parent of the other artifacts is a parent POM that holds the configuration (.oss or .main)
 
+# Java version
+
+The lowest supported Java version is 1.6. Using higher versions of Java (1.7 and 1.8) is possible if:
+ - the code will be more readable,
+ - the code will be clearer,
+ - the performance will be higher,
+ - etc.
+
+Using higher version of Java without specific reason is not recommended.
+
 # Java package
 
  - The java package in a Maven artifact must match the artifactId. In case of API projects the "api" ending in the package is unnecessary and not recommended.
