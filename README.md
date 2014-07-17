@@ -34,7 +34,7 @@ Projects with different versioning lifecycle should be stored in separate reposi
 E.g.:
  - [resource-api](https://github.com/everit-org/resource-api)
  - [resource-ri](https://github.com/everit-org/resource-ri)
- - [resource-ext](https://github.com/everit-org/resource-ext) (API extension that does not belong to the core functionalities of the project)
+ - [resource-resolver-api](https://github.com/everit-org/resource-resolver-api) (API extension that does not belong to the core functionalities of the project)
 
 ## Project structure by repositories
 
@@ -61,7 +61,7 @@ The artifactId must start with groupId and must be followed with the name of the
 E.g.:
  - org.everit.osgi.resource.api
  - org.everit.osgi.resource.ri
- - org.everit.osgi.resource.ext
+ - org.everit.osgi.resource.resolver.api
 
 ### Version
 
@@ -100,3 +100,9 @@ Using higher version of Java without specific reason is not recommended.
 
  - The java package in a Maven artifact must match the artifactId. In case of API projects the "api" ending in the package is unnecessary and not recommended.
  - Internal packages that are not exported as OSGi package must named "...inetrnal".
+
+E.g.:
+ - org.everit.osgi.resource - the package of the resource-api project
+ - org.everit.osgi.resource.ri - the package of the resource-ri project
+ - org.everit.osgi.resource.ri.internal - the internal package of the resource-ri project
+ - org.everit.osgi.resource.resolver - the package of the resource-resolver-api project
