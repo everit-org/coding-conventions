@@ -106,3 +106,5 @@ E.g.:
  - org.everit.osgi.resource.ri - the package of the resource-ri project
  - org.everit.osgi.resource.ri.internal - the internal package of the resource-ri project
  - org.everit.osgi.resource.resolver - the package of the resource-resolver-api project
+  
+[![Analytics](https://ga-beacon.appspot.com/UA-15041869-4/everit-org/coding-conventions)](https://github.com/igrigorik/ga-beacon)
