@@ -190,7 +190,6 @@
       <property name="tokens" value="IMPORT,CLASS_DEF,ENUM_DEF,INTERFACE_DEF,CTOR_DEF,METHOD_DEF,STATIC_INIT,INSTANCE_INIT,VARIABLE_DEF"/>
     </module>
     <module name="DefaultComesLast"/>
-    <module name="DeclarationOrder"/>
     <module name="EqualsAvoidNull"/>
     <module name="FallThrough"/>
     <module name="ModifiedControlVariable"/>
