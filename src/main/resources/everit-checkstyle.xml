@@ -166,7 +166,6 @@
     </module>
     <module name="NonEmptyAtclauseDescription"/>
     <module name="JavadocTagContinuationIndentation"/>
-    <module name="AtclauseOrder"/>
     <module name="AtclauseOrder">
       <property name="tagOrder" value="@param,@return,@throws,@see,@since,@deprecated"/>
     </module>
@@ -188,7 +187,9 @@
     </module>
     <module name="OuterTypeNumber"/>
     <module name="GenericWhitespace"/>
-    <module name="EmptyLineSeparator"/>
+    <module name="EmptyLineSeparator">
+      <property name="tokens" value="IMPORT,CLASS_DEF,ENUM_DEF,INTERFACE_DEF,CTOR_DEF,METHOD_DEF,STATIC_INIT,INSTANCE_INIT,VARIABLE_DEF"/>
+    </module>
     <module name="DefaultComesLast"/>
     <module name="DeclarationOrder"/>
     <module name="EqualsAvoidNull"/>
@@ -206,10 +207,6 @@
     </module>
     <module name="JavaNCSS"/>
     <module name="OneTopLevelClass"/>
-  </module>
-  <module name="JavadocPackage">
-    <property name="severity" value="ignore"/>
-    <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
   </module>
   <module name="Translation"/>
   <module name="FileLength"/>
