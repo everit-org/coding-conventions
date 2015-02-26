@@ -79,10 +79,6 @@
     <module name="ParameterNumber">
       <property name="ignoreOverriddenMethods" value="true"/>
     </module>
-    <module name="LineLength">
-      <property name="max" value="120"/>
-      <property name="tabWidth" value="4"/>
-    </module>
     <module name="EmptyForIteratorPad"/>
     <module name="MethodParamPad"/>
     <module name="NoWhitespaceAfter">
@@ -112,8 +108,11 @@
     <module name="NeedBraces"/>
     <module name="RightCurly"/>
     <module name="EmptyStatement"/>
-    <module name="EqualsHashCode"/>
+    <module name="EqualsHashCode">
+      <property name="severity" value="error"/>
+    </module>
     <module name="HiddenField">
+      <property name="severity" value="info"/>
       <property name="ignoreConstructorParameter" value="true"/>
       <property name="ignoreSetter" value="true"/>
     </module>
@@ -154,8 +153,12 @@
       <property name="message" value="Using @author in javadoc is forbidden!"/>
       <property name="illegalPattern" value="true"/>
     </module>
-    <module name="NPathComplexity"/>
-    <module name="CyclomaticComplexity"/>
+    <module name="NPathComplexity">
+      <property name="severity" value="error"/>
+    </module>
+    <module name="CyclomaticComplexity">
+      <property name="severity" value="error"/>
+    </module>
     <module name="AnnotationLocation">
       <property name="tokens" value="CLASS_DEF,INTERFACE_DEF,ENUM_DEF,METHOD_DEF,CTOR_DEF"/>
     </module>
@@ -193,10 +196,14 @@
     <module name="EqualsAvoidNull"/>
     <module name="FallThrough"/>
     <module name="ModifiedControlVariable"/>
-    <module name="MultipleStringLiterals"/>
+    <module name="MultipleStringLiterals">
+      <property name="severity" value="info"/>
+    </module>
     <module name="MultipleVariableDeclarations"/>
     <module name="PackageDeclaration"/>
-    <module name="StringLiteralEquality"/>
+    <module name="StringLiteralEquality">
+      <property name="severity" value="error"/>
+    </module>
     <module name="OneStatementPerLine"/>
     <module name="Indentation">
       <property name="basicOffset" value="2"/>
