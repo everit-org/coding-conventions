@@ -129,9 +129,7 @@
     <module name="InterfaceIsType"/>
     <module name="ArrayTypeStyle"/>
     <module name="FinalParameters"/>
-    <module name="TodoComment">
-      <property name="format" value="TODO "/>
-    </module>
+    <module name="TodoComment"/>
     <module name="UpperEll"/>
     <module name="LineLength">
       <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
