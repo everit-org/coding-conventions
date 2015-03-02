@@ -29,6 +29,14 @@
   <name>Everit Coding Conventions</name>
   <description>A set of configuration files that can be used during development.</description>
 
+  <properties>
+    <projectpath>coding-conventions</projectpath>
+    <maven.compiler.source>1.6</maven.compiler.source>
+    <maven.compiler.target>1.6</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
+
   <inceptionYear>2011</inceptionYear>
 
   <url>http://everit.org</url>
@@ -47,15 +55,10 @@
   </licenses>
 
   <scm>
-    <connection>scm:git:https://github.com/everit-org/coding-conventions.git</connection>
-    <developerConnection>scm:git:https://github.com/everit-org/coding-conventions.git</developerConnection>
-    <url>https://github.com/everit-org/coding-conventions</url>
+    <connection>scm:git:https://github.com/everit-org/${projectpath}.git</connection>
+    <developerConnection>scm:git:https://github.com/everit-org/${projectpath}.git</developerConnection>
+    <url>https://github.com/everit-org/${projectpath}</url>
   </scm>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-  </properties>
 
   <developers>
     <developer>
@@ -103,6 +106,12 @@
       <groupId>com.puppycrawl.tools</groupId>
       <artifactId>checkstyle</artifactId>
       <version>6.3</version>
+      <exclusions>
+        <exclusion>
+          <groupId>com.sun</groupId>
+          <artifactId>tools</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
   </dependencies>
 
