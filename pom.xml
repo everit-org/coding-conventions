@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright (C) 2011 Everit Kft. (http://www.everit.biz)
+    Copyright (C) 2011 Everit Kft. (http://www.everit.org)
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -23,6 +23,7 @@
   <groupId>org.everit.config</groupId>
   <artifactId>org.everit.config.conventions</artifactId>
   <version>9.0.0-SNAPSHOT</version>
+
   <packaging>jar</packaging>
 
   <name>Everit Coding Conventions</name>
@@ -34,7 +35,7 @@
 
   <organization>
     <name>Everit Kft.</name>
-    <url>http://www.everit.biz</url>
+    <url>http://www.everit.org</url>
   </organization>
 
   <licenses>
@@ -96,5 +97,13 @@
       </plugin>
     </plugins>
   </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.puppycrawl.tools</groupId>
+      <artifactId>checkstyle</artifactId>
+      <version>6.3</version>
+    </dependency>
+  </dependencies>
 
 </project>

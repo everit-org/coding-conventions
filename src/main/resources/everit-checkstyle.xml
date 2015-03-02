@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright (C) 2011 Everit Kft. (http://www.everit.biz)
+    Copyright (C) 2011 Everit Kft. (http://www.everit.org)
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -29,6 +29,7 @@
   <property name="severity" value="warning"/>
   <module name="TreeWalker">
     <property name="tabWidth" value="4"/>
+    <module name="org.everit.config.conventions.checkstyle.SuppressGeneratedHolder" />
     <module name="JavadocMethod">
       <property name="minLineCount" value="2"/>
       <property name="allowedAnnotations" value="Override, Test"/>
@@ -206,6 +207,7 @@
     </module>
     <module name="OneStatementPerLine"/>
     <module name="Indentation">
+      <property name="severity" value="info"/>
       <property name="basicOffset" value="2"/>
       <property name="caseIndent" value="2"/>
       <property name="arrayInitIndent" value="2"/>
@@ -231,4 +233,5 @@
     <property name="message" value="Windows line endings detected. Use Unix line endings!"/>
   </module>
   <module name="UniqueProperties"/>
+  <module name="org.everit.config.conventions.checkstyle.SuppressGeneratedFilter" />
 </module>
