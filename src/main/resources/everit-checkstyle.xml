@@ -22,214 +22,217 @@
     This configuration file was written by the eclipse-cs plugin configuration editor
 -->
 <!--
-    Checkstyle-Configuration: everit-checkstyle
+    Checkstyle-Configuration: dddd
     Description: none
 -->
 <module name="Checker">
-  <property name="severity" value="warning"/>
+  <property name="severity" value="warning" />
   <module name="TreeWalker">
-    <property name="tabWidth" value="4"/>
+    <property name="tabWidth" value="4" />
     <module name="org.everit.config.conventions.checkstyle.SuppressGeneratedHolder" />
     <module name="JavadocMethod">
-      <property name="minLineCount" value="2"/>
-      <property name="allowedAnnotations" value="Override, Test"/>
-      <property name="scope" value="package"/>
-      <property name="allowUndeclaredRTE" value="true"/>
-      <property name="allowThrowsTagsForSubclasses" value="true"/>
-      <property name="allowMissingParamTags" value="true"/>
-      <property name="allowMissingThrowsTags" value="true"/>
-      <property name="allowMissingReturnTag" value="true"/>
-      <property name="suppressLoadErrors" value="true"/>
+      <property name="minLineCount" value="2" />
+      <property name="allowedAnnotations" value="Override, Test" />
+      <property name="scope" value="package" />
+      <property name="allowUndeclaredRTE" value="true" />
+      <property name="allowThrowsTagsForSubclasses" value="true" />
+      <property name="allowMissingParamTags" value="true" />
+      <property name="allowMissingThrowsTags" value="true" />
+      <property name="allowMissingReturnTag" value="true" />
+      <property name="suppressLoadErrors" value="true" />
     </module>
     <module name="JavadocType">
-      <property name="allowUnknownTags" value="true"/>
+      <property name="allowUnknownTags" value="true" />
     </module>
     <module name="JavadocStyle">
-      <property name="checkEmptyJavadoc" value="true"/>
+      <property name="checkEmptyJavadoc" value="true" />
     </module>
-    <module name="ConstantName"/>
+    <module name="ConstantName" />
     <module name="LocalFinalVariableName">
-      <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$"/>
+      <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$" />
     </module>
     <module name="LocalVariableName">
-      <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$"/>
-      <property name="allowOneCharVarInForLoop" value="true"/>
-      <property name="tokens" value="VARIABLE_DEF"/>
+      <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$" />
+      <property name="allowOneCharVarInForLoop" value="true" />
+      <property name="tokens" value="VARIABLE_DEF" />
     </module>
     <module name="MemberName">
-      <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$"/>
+      <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$" />
     </module>
     <module name="MethodName">
-      <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9_]*$"/>
+      <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9_]*$" />
     </module>
     <module name="PackageName">
-      <property name="format" value="^[a-z]+(\.[a-z][a-z0-9]*)*$"/>
+      <property name="format" value="^[a-z]+(\.[a-z][a-z0-9]*)*$" />
     </module>
     <module name="ParameterName">
-      <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$"/>
+      <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$" />
     </module>
     <module name="StaticVariableName">
-      <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$"/>
+      <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$" />
     </module>
-    <module name="TypeName"/>
-    <module name="AvoidStarImport"/>
-    <module name="IllegalImport"/>
-    <module name="RedundantImport"/>
-    <module name="UnusedImports"/>
-    <module name="MethodLength"/>
+    <module name="TypeName" />
+    <module name="AvoidStarImport" />
+    <module name="IllegalImport" />
+    <module name="RedundantImport" />
+    <module name="UnusedImports" />
+    <module name="MethodLength" />
     <module name="ParameterNumber">
-      <property name="ignoreOverriddenMethods" value="true"/>
+      <property name="ignoreOverriddenMethods" value="true" />
     </module>
-    <module name="EmptyForIteratorPad"/>
-    <module name="MethodParamPad"/>
+    <module name="EmptyForIteratorPad" />
+    <module name="MethodParamPad" />
     <module name="NoWhitespaceAfter">
-      <property name="tokens" value="BNOT,DEC,DOT,INC,LNOT,UNARY_MINUS,UNARY_PLUS"/>
+      <property name="tokens" value="BNOT,DEC,DOT,INC,LNOT,UNARY_MINUS,UNARY_PLUS" />
     </module>
-    <module name="NoWhitespaceBefore"/>
+    <module name="NoWhitespaceBefore" />
     <module name="OperatorWrap">
-      <property name="tokens" value="BAND,BOR,BSR,BXOR,DIV,EQUAL,GE,GT,LAND,LE,LITERAL_INSTANCEOF,LOR,LT,MINUS,MOD,NOT_EQUAL,PLUS,QUESTION,SL,SR,STAR"/>
+      <property name="tokens"
+        value="BAND,BOR,BSR,BXOR,DIV,EQUAL,GE,GT,LAND,LE,LITERAL_INSTANCEOF,LOR,LT,MINUS,MOD,NOT_EQUAL,PLUS,QUESTION,SL,SR,STAR" />
     </module>
-    <module name="ParenPad"/>
+    <module name="ParenPad" />
     <module name="TypecastParenPad">
-      <property name="tokens" value="RPAREN,TYPECAST"/>
+      <property name="tokens" value="RPAREN,TYPECAST" />
     </module>
-    <module name="WhitespaceAfter"/>
+    <module name="WhitespaceAfter" />
     <module name="WhitespaceAround">
-      <property name="tokens" value="ASSIGN,BAND,BAND_ASSIGN,BOR,BOR_ASSIGN,BSR,BSR_ASSIGN,BXOR,BXOR_ASSIGN,COLON,DIV,DIV_ASSIGN,DO_WHILE,EQUAL,GE,GT,LAND,LCURLY,LE,LITERAL_ASSERT,LITERAL_CATCH,LITERAL_DO,LITERAL_ELSE,LITERAL_FINALLY,LITERAL_FOR,LITERAL_IF,LITERAL_RETURN,LITERAL_SYNCHRONIZED,LITERAL_TRY,LITERAL_WHILE,LOR,LT,MINUS,MINUS_ASSIGN,MOD,MOD_ASSIGN,NOT_EQUAL,PLUS,PLUS_ASSIGN,QUESTION,RCURLY,SL,SLIST,SL_ASSIGN,SR,SR_ASSIGN,STAR,STAR_ASSIGN,TYPE_EXTENSION_AND,WILDCARD_TYPE"/>
+      <property name="tokens"
+        value="ASSIGN,BAND,BAND_ASSIGN,BOR,BOR_ASSIGN,BSR,BSR_ASSIGN,BXOR,BXOR_ASSIGN,COLON,DIV,DIV_ASSIGN,DO_WHILE,EQUAL,GE,GT,LAND,LCURLY,LE,LITERAL_ASSERT,LITERAL_CATCH,LITERAL_DO,LITERAL_ELSE,LITERAL_FINALLY,LITERAL_FOR,LITERAL_IF,LITERAL_RETURN,LITERAL_SYNCHRONIZED,LITERAL_TRY,LITERAL_WHILE,LOR,LT,MINUS,MINUS_ASSIGN,MOD,MOD_ASSIGN,NOT_EQUAL,PLUS,PLUS_ASSIGN,QUESTION,RCURLY,SL,SLIST,SL_ASSIGN,SR,SR_ASSIGN,STAR,STAR_ASSIGN,TYPE_EXTENSION_AND" />
     </module>
-    <module name="ModifierOrder"/>
-    <module name="RedundantModifier"/>
-    <module name="AvoidNestedBlocks"/>
+    <module name="ModifierOrder" />
+    <module name="RedundantModifier" />
+    <module name="AvoidNestedBlocks" />
     <module name="EmptyBlock">
-      <property name="option" value="text"/>
+      <property name="option" value="text" />
     </module>
     <module name="LeftCurly">
-      <property name="maxLineLength" value="100"/>
+      <property name="maxLineLength" value="100" />
     </module>
-    <module name="NeedBraces"/>
-    <module name="RightCurly"/>
-    <module name="EmptyStatement"/>
+    <module name="NeedBraces" />
+    <module name="RightCurly" />
+    <module name="EmptyStatement" />
     <module name="EqualsHashCode">
-      <property name="severity" value="error"/>
+      <property name="severity" value="error" />
     </module>
     <module name="HiddenField">
-      <property name="severity" value="info"/>
-      <property name="ignoreConstructorParameter" value="true"/>
-      <property name="ignoreSetter" value="true"/>
+      <property name="severity" value="info" />
+      <property name="ignoreConstructorParameter" value="true" />
+      <property name="ignoreSetter" value="true" />
     </module>
-    <module name="IllegalInstantiation"/>
-    <module name="InnerAssignment"/>
+    <module name="IllegalInstantiation" />
+    <module name="InnerAssignment" />
     <module name="MagicNumber">
-      <property name="ignoreHashCodeMethod" value="true"/>
+      <property name="ignoreHashCodeMethod" value="true" />
     </module>
-    <module name="MissingSwitchDefault"/>
-    <module name="SimplifyBooleanExpression"/>
-    <module name="SimplifyBooleanReturn"/>
-    <module name="FinalClass"/>
-    <module name="HideUtilityClassConstructor"/>
-    <module name="InterfaceIsType"/>
-    <module name="ArrayTypeStyle"/>
-    <module name="FinalParameters"/>
-    <module name="TodoComment"/>
-    <module name="UpperEll"/>
+    <module name="MissingSwitchDefault" />
+    <module name="SimplifyBooleanExpression" />
+    <module name="SimplifyBooleanReturn" />
+    <module name="FinalClass" />
+    <module name="HideUtilityClassConstructor" />
+    <module name="InterfaceIsType" />
+    <module name="ArrayTypeStyle" />
+    <module name="FinalParameters" />
+    <module name="TodoComment" />
+    <module name="UpperEll" />
     <module name="LineLength">
-      <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
-      <property name="max" value="100"/>
+      <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://" />
+      <property name="max" value="100" />
     </module>
-    <module name="IllegalThrows"/>
+    <module name="IllegalThrows" />
     <module name="Regexp">
-      <property name="format" value="System\.out\.print"/>
-      <property name="message" value="Using 'System.out.print*' is forbidden, use a logger instead!"/>
-      <property name="illegalPattern" value="true"/>
-    </module>
-    <module name="Regexp">
-      <property name="format" value="\.printStackTrace"/>
-      <property name="message" value="Using 'printStackTrace' is forbidden, use a logger instead!"/>
-      <property name="illegalPattern" value="true"/>
+      <property name="format" value="System\.out\.print" />
+      <property name="message" value="Using 'System.out.print*' is forbidden, use a logger instead!" />
+      <property name="illegalPattern" value="true" />
     </module>
     <module name="Regexp">
-      <property name="format" value="\*\s*\@author"/>
-      <property name="message" value="Using @author in javadoc is forbidden!"/>
-      <property name="illegalPattern" value="true"/>
+      <property name="format" value="\.printStackTrace" />
+      <property name="message" value="Using 'printStackTrace' is forbidden, use a logger instead!" />
+      <property name="illegalPattern" value="true" />
+    </module>
+    <module name="Regexp">
+      <property name="format" value="\*\s*\@author" />
+      <property name="message" value="Using @author in javadoc is forbidden!" />
+      <property name="illegalPattern" value="true" />
     </module>
     <module name="NPathComplexity">
-      <property name="severity" value="error"/>
+      <property name="severity" value="error" />
     </module>
     <module name="CyclomaticComplexity">
-      <property name="severity" value="error"/>
+      <property name="severity" value="error" />
     </module>
     <module name="AnnotationLocation">
-      <property name="tokens" value="CLASS_DEF,INTERFACE_DEF,ENUM_DEF,METHOD_DEF,CTOR_DEF"/>
+      <property name="tokens" value="CLASS_DEF,INTERFACE_DEF,ENUM_DEF,METHOD_DEF,CTOR_DEF" />
     </module>
     <module name="AnnotationLocation">
-      <property name="tokens" value="VARIABLE_DEF"/>
-      <property name="allowSamelineMultipleAnnotations" value="true"/>
+      <property name="tokens" value="VARIABLE_DEF" />
+      <property name="allowSamelineMultipleAnnotations" value="true" />
     </module>
-    <module name="NonEmptyAtclauseDescription"/>
-    <module name="JavadocTagContinuationIndentation"/>
+    <module name="NonEmptyAtclauseDescription" />
+    <module name="JavadocTagContinuationIndentation" />
     <module name="AtclauseOrder">
-      <property name="tagOrder" value="@param,@return,@throws,@see,@since,@deprecated"/>
+      <property name="tagOrder" value="@param,@return,@throws,@see,@since,@deprecated" />
     </module>
-    <module name="JavadocParagraph"/>
-    <module name="SingleLineJavadoc"/>
+    <module name="JavadocParagraph" />
+    <module name="SingleLineJavadoc" />
     <module name="ClassTypeParameterName">
-      <property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)"/>
+      <property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)" />
     </module>
     <module name="MethodTypeParameterName">
-      <property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)"/>
+      <property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)" />
     </module>
     <module name="AbbreviationAsWordInName">
-      <property name="allowedAbbreviationLength" value="1"/>
-      <property name="ignoreFinal" value="false"/>
+      <property name="allowedAbbreviationLength" value="1" />
+      <property name="ignoreFinal" value="false" />
     </module>
-    <module name="AvoidStaticImport"/>
+    <module name="AvoidStaticImport" />
     <module name="ImportOrder">
-      <property name="separated" value="true"/>
+      <property name="separated" value="true" />
     </module>
-    <module name="OuterTypeNumber"/>
-    <module name="GenericWhitespace"/>
+    <module name="OuterTypeNumber" />
+    <module name="GenericWhitespace" />
     <module name="EmptyLineSeparator">
-      <property name="tokens" value="IMPORT,CLASS_DEF,ENUM_DEF,INTERFACE_DEF,CTOR_DEF,METHOD_DEF,STATIC_INIT,INSTANCE_INIT,VARIABLE_DEF"/>
+      <property name="tokens"
+        value="IMPORT,CLASS_DEF,ENUM_DEF,INTERFACE_DEF,CTOR_DEF,METHOD_DEF,STATIC_INIT,INSTANCE_INIT,VARIABLE_DEF" />
     </module>
-    <module name="DefaultComesLast"/>
-    <module name="EqualsAvoidNull"/>
-    <module name="FallThrough"/>
-    <module name="ModifiedControlVariable"/>
+    <module name="DefaultComesLast" />
+    <module name="EqualsAvoidNull" />
+    <module name="FallThrough" />
+    <module name="ModifiedControlVariable" />
     <module name="MultipleStringLiterals">
-      <property name="severity" value="info"/>
+      <property name="severity" value="info" />
     </module>
-    <module name="MultipleVariableDeclarations"/>
-    <module name="PackageDeclaration"/>
+    <module name="MultipleVariableDeclarations" />
+    <module name="PackageDeclaration" />
     <module name="StringLiteralEquality">
-      <property name="severity" value="error"/>
+      <property name="severity" value="error" />
     </module>
-    <module name="OneStatementPerLine"/>
+    <module name="OneStatementPerLine" />
     <module name="Indentation">
-      <property name="severity" value="info"/>
-      <property name="basicOffset" value="2"/>
-      <property name="caseIndent" value="2"/>
-      <property name="arrayInitIndent" value="2"/>
+      <property name="severity" value="info" />
+      <property name="basicOffset" value="2" />
+      <property name="caseIndent" value="2" />
+      <property name="arrayInitIndent" value="2" />
     </module>
-    <module name="JavaNCSS"/>
-    <module name="OneTopLevelClass"/>
+    <module name="JavaNCSS" />
+    <module name="OneTopLevelClass" />
   </module>
-  <module name="Translation"/>
-  <module name="FileLength"/>
+  <module name="Translation" />
+  <module name="FileLength" />
   <module name="FileTabCharacter">
-    <property name="eachLine" value="true"/>
+    <property name="eachLine" value="true" />
   </module>
   <module name="RegexpSingleline">
-    <property name="format" value="(^\s+$)|([^\*]\s$)|(^.*[^\s]+.*\*\s$)"/>
-    <property name="message" value="Line has trailing spaces."/>
+    <property name="format" value="(^\s+$)|([^\*]\s$)|(^.*[^\s]+.*\*\s$)" />
+    <property name="message" value="Line has trailing spaces." />
   </module>
   <module name="NewlineAtEndOfFile">
-    <property name="lineSeparator" value="lf"/>
+    <property name="lineSeparator" value="lf" />
   </module>
   <module name="RegexpMultiline">
-    <property name="severity" value="error"/>
-    <property name="format" value="(?s:\r\n.*)"/>
-    <property name="message" value="Windows line endings detected. Use Unix line endings!"/>
+    <property name="severity" value="error" />
+    <property name="format" value="(?s:\r\n.*)" />
+    <property name="message" value="Windows line endings detected. Use Unix line endings!" />
   </module>
-  <module name="UniqueProperties"/>
+  <module name="UniqueProperties" />
   <module name="org.everit.config.conventions.checkstyle.SuppressGeneratedFilter" />
 </module>

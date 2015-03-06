@@ -24,7 +24,7 @@
   <artifactId>org.everit.config.conventions</artifactId>
   <version>9.0.0-SNAPSHOT</version>
 
-  <packaging>jar</packaging>
+  <packaging>bundle</packaging>
 
   <name>Everit Coding Conventions</name>
   <description>A set of configuration files that can be used during development.</description>
@@ -69,6 +69,23 @@
   <build>
     <plugins>
       <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <version>2.5.3</version>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Import-Package />
+            <Require-Bundle>
+              net.sf.eclipsecs.checkstyle,
+              net.sf.eclipsecs.core,
+              net.sf.eclipsecs.ui
+            </Require-Bundle>
+            <Eclipse-RegisterBuddy>net.sf.eclipsecs.core</Eclipse-RegisterBuddy>
+          </instructions>
+        </configuration>
+      </plugin>
+      <plugin>
         <inherited>false</inherited>
         <groupId>com.mycila</groupId>
         <artifactId>license-maven-plugin</artifactId>
@@ -105,7 +122,7 @@
     <dependency>
       <groupId>com.puppycrawl.tools</groupId>
       <artifactId>checkstyle</artifactId>
-      <version>6.3</version>
+      <version>6.4.1</version>
       <exclusions>
         <exclusion>
           <groupId>com.sun</groupId>
