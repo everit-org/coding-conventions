@@ -22,7 +22,7 @@
 <checkstyle-metadata>
   <rule-group-metadata name="Everit" priority="1700">
 
-    <rule-metadata name="SuppressGeneratedHolder" internal-name="org.everit.config.conventions.checkstyle.SuppressGeneratedFilter" parent="TreeWalker"
+    <rule-metadata name="SuppressGeneratedHolder" internal-name="org.everit.config.conventions.checkstyle.SuppressGeneratedHolder" parent="TreeWalker"
       hasSeverity="false">
       <alternative-name internal-name="org.everit.config.conventions.checkstyle.SuppressGeneratedHolder" />
       <description>The analyzer part of SuppressGeneratedFilter. The two works together.</description>

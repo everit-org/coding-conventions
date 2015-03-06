@@ -22,14 +22,13 @@
     This configuration file was written by the eclipse-cs plugin configuration editor
 -->
 <!--
-    Checkstyle-Configuration: dddd
+    Checkstyle-Configuration: Everit Checks
     Description: none
 -->
 <module name="Checker">
   <property name="severity" value="warning" />
   <module name="TreeWalker">
     <property name="tabWidth" value="4" />
-    <module name="org.everit.config.conventions.checkstyle.SuppressGeneratedHolder" />
     <module name="JavadocMethod">
       <property name="minLineCount" value="2" />
       <property name="allowedAnnotations" value="Override, Test" />
@@ -180,10 +179,6 @@
     <module name="MethodTypeParameterName">
       <property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)" />
     </module>
-    <module name="AbbreviationAsWordInName">
-      <property name="allowedAbbreviationLength" value="1" />
-      <property name="ignoreFinal" value="false" />
-    </module>
     <module name="AvoidStaticImport" />
     <module name="ImportOrder">
       <property name="separated" value="true" />
@@ -215,6 +210,7 @@
     </module>
     <module name="JavaNCSS" />
     <module name="OneTopLevelClass" />
+    <module name="org.everit.config.conventions.checkstyle.SuppressGeneratedHolder" />
   </module>
   <module name="Translation" />
   <module name="FileLength" />
