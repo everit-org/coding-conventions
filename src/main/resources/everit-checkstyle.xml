@@ -22,7 +22,7 @@
     This configuration file was written by the eclipse-cs plugin configuration editor
 -->
 <!--
-    Checkstyle-Configuration: Everit Checks
+    Checkstyle-Configuration: Everit Checkstyle
     Description: none
 -->
 <module name="Checker">
@@ -47,29 +47,15 @@
       <property name="checkEmptyJavadoc" value="true" />
     </module>
     <module name="ConstantName" />
-    <module name="LocalFinalVariableName">
-      <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$" />
-    </module>
-    <module name="LocalVariableName">
-      <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$" />
-      <property name="allowOneCharVarInForLoop" value="true" />
-      <property name="tokens" value="VARIABLE_DEF" />
-    </module>
-    <module name="MemberName">
-      <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$" />
-    </module>
-    <module name="MethodName">
-      <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9_]*$" />
-    </module>
+    <module name="LocalFinalVariableName" />
+    <module name="LocalVariableName" />
+    <module name="MemberName" />
+    <module name="MethodName" />
     <module name="PackageName">
       <property name="format" value="^[a-z]+(\.[a-z][a-z0-9]*)*$" />
     </module>
-    <module name="ParameterName">
-      <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$" />
-    </module>
-    <module name="StaticVariableName">
-      <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$" />
-    </module>
+    <module name="ParameterName" />
+    <module name="StaticVariableName" />
     <module name="TypeName" />
     <module name="AvoidStarImport" />
     <module name="IllegalImport" />
@@ -174,10 +160,10 @@
     <module name="JavadocParagraph" />
     <module name="SingleLineJavadoc" />
     <module name="ClassTypeParameterName">
-      <property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)" />
+      <property name="format" value="^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$" />
     </module>
     <module name="MethodTypeParameterName">
-      <property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)" />
+      <property name="format" value="^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$" />
     </module>
     <module name="AvoidStaticImport" />
     <module name="ImportOrder">
