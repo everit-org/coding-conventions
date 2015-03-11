@@ -212,9 +212,14 @@ public class SuppressGeneratedHolder extends Check {
         return;
       }
 
-      // get range of target
-      int firstLine = targetAST.getLineNo();
-      int firstColumn = targetAST.getColumnNo();
+      // get range of target, if it is a class definition, we ignore the whole file
+      int firstLine = 0;
+      int firstColumn = 0;
+
+      if (targetAST.getType() != TokenTypes.CLASS_DEF) {
+        firstLine = targetAST.getLineNo();
+        firstColumn = targetAST.getColumnNo();
+      }
 
       int lastLine;
       int lastColumn;
