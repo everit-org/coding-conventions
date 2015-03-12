@@ -18,6 +18,11 @@
 -->
 <FindBugsFilter>
   <Match>
-    <Bug pattern="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR,NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE" />
+    <Bug
+      pattern="
+        UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR,
+        NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE,
+        URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD
+        " />
   </Match>
 </FindBugsFilter>
