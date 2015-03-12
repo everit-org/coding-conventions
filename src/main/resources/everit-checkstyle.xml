@@ -22,7 +22,7 @@
     This configuration file was written by the eclipse-cs plugin configuration editor
 -->
 <!--
-    Checkstyle-Configuration: Everit Checkstyle
+    Checkstyle-Configuration: Everit Checks
     Description: none
 -->
 <module name="Checker">
@@ -166,9 +166,6 @@
       <property name="format" value="^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$" />
     </module>
     <module name="AvoidStaticImport" />
-    <module name="ImportOrder">
-      <property name="separated" value="true" />
-    </module>
     <module name="OuterTypeNumber" />
     <module name="GenericWhitespace" />
     <module name="EmptyLineSeparator">
