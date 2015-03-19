@@ -22,7 +22,7 @@
 
   <groupId>org.everit.config</groupId>
   <artifactId>org.everit.config.conventions</artifactId>
-  <version>9.0.3</version>
+  <version>9.0.4-SNAPSHOT</version>
 
   <packaging>bundle</packaging>
 
