@@ -22,7 +22,7 @@
 
   <groupId>org.everit.config</groupId>
   <artifactId>org.everit.config.conventions</artifactId>
-  <version>9.0.6</version>
+  <version>9.0.7</version>
 
   <packaging>bundle</packaging>
 
@@ -71,7 +71,7 @@
       <plugin>
         <groupId>org.apache.felix</groupId>
         <artifactId>maven-bundle-plugin</artifactId>
-        <version>2.5.3</version>
+        <version>2.5.4</version>
         <extensions>true</extensions>
         <configuration>
           <instructions>
@@ -89,7 +89,7 @@
         <inherited>false</inherited>
         <groupId>com.mycila</groupId>
         <artifactId>license-maven-plugin</artifactId>
-        <version>2.10</version>
+        <version>2.11</version>
         <configuration>
           <aggregate>false</aggregate>
           <header>com/mycila/maven/plugin/license/templates/APACHE-2.txt</header>
@@ -122,7 +122,7 @@
     <dependency>
       <groupId>com.puppycrawl.tools</groupId>
       <artifactId>checkstyle</artifactId>
-      <version>6.5</version>
+      <version>6.6</version>
       <exclusions>
         <exclusion>
           <groupId>com.sun</groupId>
