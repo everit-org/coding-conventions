@@ -56,7 +56,7 @@
     <setting id="cleanup.make_private_fields_final" value="false" />
     <setting id="cleanup.add_generated_serial_version_id" value="false" />
     <setting id="cleanup.organize_imports" value="true" />
-    <setting id="cleanup.sort_members_all" value="false" />
+    <setting id="cleanup.sort_members_all" value="true" />
     <setting id="cleanup.remove_trailing_whitespaces" value="true" />
     <setting id="cleanup.use_blocks_only_for_return_and_throw" value="false" />
     <setting id="cleanup.use_parentheses_in_expressions" value="true" />
@@ -69,5 +69,11 @@
     <setting id="cleanup.always_use_blocks" value="true" />
     <setting id="cleanup.qualify_static_member_accesses_with_declaring_class" value="true" />
     <setting id="cleanup.format_source_code_changes_only" value="false" />
+    <setting id="cleanup.convert_functional_interfaces" value="false" />
+    <setting id="cleanup.insert_inferred_type_arguments" value="false" />
+    <setting id="cleanup.use_type_arguments" value="false" />
+    <setting id="cleanup.remove_redundant_type_arguments" value="true" />
+    <setting id="cleanup.use_anonymous_class_creation" value="false" />
+    <setting id="cleanup.use_lambda" value="true" />
   </profile>
 </profiles>
