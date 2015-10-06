@@ -159,7 +159,6 @@
     <module name="AtclauseOrder">
       <property name="tagOrder" value="@param,@return,@throws,@see,@since,@deprecated" />
     </module>
-    <module name="JavadocParagraph" />
     <module name="SingleLineJavadoc" />
     <module name="ClassTypeParameterName">
       <property name="format" value="^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$" />
