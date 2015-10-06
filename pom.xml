@@ -22,7 +22,7 @@
 
   <groupId>org.everit.config</groupId>
   <artifactId>org.everit.config.conventions</artifactId>
-  <version>9.0.8</version>
+  <version>9.1.0-SNAPSHOT</version>
 
   <packaging>bundle</packaging>
 
@@ -31,8 +31,8 @@
 
   <properties>
     <projectpath>coding-conventions</projectpath>
-    <maven.compiler.source>1.6</maven.compiler.source>
-    <maven.compiler.target>1.6</maven.compiler.target>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
