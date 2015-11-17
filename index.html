@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+<!--
+
+    Copyright (C) 2011 Everit Kft. (http://www.everit.org)
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Coding Conventions</title>
+<link rel="icon" type="image/ico" href="http://www.everit.org/fonts/favicon.ico">
+
+<!--    <link rel="stylesheet" type="text/css" href="common/css/base.css">-->
+<link href="http://www.everit.org/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://www.everit.org/css/docs.min.css" rel="stylesheet">
+<link href="http://www.everit.org/css/everit.css" rel="stylesheet">
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push([ '_setAccount', 'UA-15041869-4' ]);
+  _gaq.push([ '_setDomainName', 'everit.org' ]);
+  _gaq.push([ '_trackPageview' ]);
+</script>
+</head>
+
+<body class="bs-docs-home" data-spy="scroll" data-target="#affix-nav">
+  <a class="sr-only" href="#content">Skip to main content</a>
+  <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse"
+          data-target=".bs-navbar-collapse">
+          <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
+            class="icon-bar"></span> <span class="icon-bar"></span>
+        </button>
+        <a href="#" class="navbar-brand">Index</a>
+      </div>
+      <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+        <ul class="nav navbar-nav">
+          <li><a href="https://github.com/everit-org/coding-conventions" target="_blank">Source</a></li>
+          <li><a href="http://www.everit.org/" target="_blank">Community</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://www.everit.biz" target="_blank">Enterprise</a></li>
+          <li><a href="http://everitorg.wordpress.com/" target="_blank">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="bs-docs-masthead everit-header" id="content" role="main">
+    <div class="container">
+      <span class="bs-docs-booticon bs-docs-booticon-lg bs-docs-booticon-outline"> <img
+        class="logo" src="http://www.everit.org/fonts/sbz_e.svg" alt="E">
+      </span>
+      <p class="lead">Coding Conventions</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="col-md-10">
+
+      <div class="bs-docs-featurette cookbook">
+        <h2 id="introduction" class="bs-docs-featurette-title">Introduction</h2>
+        <p>A set of conventions, recommendations, guidelines and configuration files for
+          Checkstyle and Eclipse to be able to keep the structural quality of the code high.</p>
+      </div>
+      <hr class="featurette-divider">
+
+      <div class="bs-docs-featurette cookbook">
+        <h2 id="eclipse" class="bs-docs-featurette-title">Eclipse</h2>
+        <p>
+          Check the <a href="http://www.everit.org/cookbook/ide/index.html#installing_eclipse">Cookbook</a>
+          for Eclipse installation and configuration.
+        </p>
+      </div>
+      <hr class="featurette-divider">
+
+      <div class="bs-docs-featurette cookbook">
+        <h2 id="git_and_svn" class="bs-docs-featurette-title">Git and SVN</h2>
+        <h3 id="repository_naming_convention">Repository naming convention</h3>
+        <h4 id="common_rules">Common rules</h4>
+        <p>The name of the repository must describe the project itself and the following rules
+          must apply:</p>
+        <ul>
+          <li>only lower case</li>
+          <li>'-' used as word separator</li>
+          <li>numbers allowed only in special cases</li>
+        </ul>
+        <h4 id="type_1">Type #1</h4>
+        <p>Projects without dedicated API like plugins, support or helper projects,
+          configurations, etc. stored in one single repository. E.g.:</p>
+        <ul>
+          <li><a href="https://github.com/everit-org/eosgi-maven-plugin">eosgi-maven-plugin</a></li>
+          <li><a href="https://github.com/everit-org/transaction-helper">transaction-helper</a></li>
+          <li><a href="https://github.com/everit-org/thymeleaf-mvel2">thymeleaf-mvel2</a></li>
+        </ul>
+        <h4 id="type_2">Type #2</h4>
+        <p>Projects with different versioning lifecycle should be stored in separate
+          repositories. E.g. API and implementation projects:</p>
+        <ul>
+          <li>one with ending "-api" for the API part,</li>
+          <li>one with ending "-ri" for the implementation, in case of "ri" it means "Reference
+            Implementation"</li>
+        </ul>
+        <p>E.g.:</p>
+        <ul>
+          <li><a href="https://github.com/everit-org/resource-api">resource-api</a></li>
+          <li><a href="https://github.com/everit-org/resource-ri">resource-ri</a></li>
+          <li><a href="https://github.com/everit-org/resource-resolver-api">resource-resolver-api</a>
+            (API extension that does not belong to the core functionalities of the project)</li>
+        </ul>
+        <h3 id="project_structure_by_repositories">Project structure by repositories</h3>
+        <p>If no integration test project is necessary, then one single artifact exists in the
+          repository. Otherwise the following names should be picked:</p>
+        <ul>
+          <li>"core" or "component" for the project itself</li>
+          <li>"schema" for data model schemas, e.g. database schema, XML schema. etc.</li>
+          <li>"tests" for the integration tests of the project</li>
+        </ul>
+        <p>Other segmentations are allowed if better structural quality can be achived with it.</p>
+      </div>
+      <hr class="featurette-divider">
+
+      <div class="bs-docs-featurette cookbook">
+        <h2 id="maven" class="bs-docs-featurette-title">Maven</h2>
+        <h3 id="gav">GAV</h3>
+        <h4 id="groupid">GroupId</h4>
+        <p>In case of an Open Source project, the groupId must start with "org.everit...". If it
+          is an OSGi project then it is "org.everit.osgi".</p>
+        <h4 id="artifactid">ArtifactId</h4>
+        <p>The artifactId must start with groupId and must be followed with the name of the
+          repository (replacing all '-' with '.').</p>
+        <p>E.g.:</p>
+        <ul>
+          <li>org.everit.osgi.resource.api</li>
+          <li>org.everit.osgi.resource.ri</li>
+          <li>org.everit.osgi.resource.resolver.api</li>
+        </ul>
+        <h4 id="version">Version</h4>
+        <p>
+          The version number must follow the rules of <a href="http://semver.org/">Semantic
+            Versioning</a>.
+        </p>
+        <h3 id="deployment_rules">Deployment rules</h3>
+        <h4 id="do_not_deploy">Do not deploy</h4>
+        <ul>
+          <li>Artifacts with POM packaging (e.g. parent POM's that support the Maven build, to
+            build all of the sub projects together).</li>
+          <li>Test and integration test artifacts.</li>
+          <li>Artifacts that are not referenced from other projects (except if it is a
+            dedicated artifact).</li>
+        </ul>
+        <h4 id="deploy">Deploy</h4>
+        <p>All of the artifacts that do not match the "do not deploy" rule.</p>
+        <h3 id="the_parent_pom_of_an_artifact">The parent POM of an artifact</h3>
+        <p>In case of an Open Source project the newest version of the "org.everit.config.oss",
+          otherwise the "org.everit.config.main" configuration projects must be used. The following
+          rules must be applied:</p>
+        <ul>
+          <li>the parent of the project's parent is an artifact that holds the confiugration
+            (.oss or .main)</li>
+          <li>the parent of the tests project is the project's parent POM</li>
+          <li>the parent of the other artifacts is a parent POM that holds the configuration
+            (.oss or .main)</li>
+        </ul>
+      </div>
+      <hr class="featurette-divider">
+
+      <div class="bs-docs-featurette cookbook">
+        <h2 id="java_version" class="bs-docs-featurette-title">Java version</h2>
+        <p>The lowest supported Java version is 1.6. Using higher versions of Java (1.7 and 1.8)
+          is possible if:</p>
+        <ul>
+          <li>the code is more readable,</li>
+          <li>the code is clearer,</li>
+          <li>the performance is higher,</li>
+          <li>etc.</li>
+        </ul>
+        <p>Using higher version of Java without specific reason is not recommended.</p>
+      </div>
+      <hr class="featurette-divider">
+
+      <div class="bs-docs-featurette cookbook">
+        <h2 id="java_package" class="bs-docs-featurette-title">Java package</h2>
+        <ul>
+          <li>The java package in a Maven artifact must match the artifactId. In case of API
+            projects the "api" ending in the package is unnecessary and not recommended.</li>
+          <li>Internal packages that are not exported as OSGi package must named "...inetrnal".</li>
+        </ul>
+        <p>E.g.:</p>
+        <ul>
+          <li>org.everit.osgi.resource - the package of the resource-api project</li>
+          <li>org.everit.osgi.resource.ri - the package of the resource-ri project</li>
+          <li>org.everit.osgi.resource.ri.internal - the internal package of the resource-ri
+            project</li>
+          <li>org.everit.osgi.resource.resolver - the package of the resource-resolver-api
+            project</li>
+        </ul>
+      </div>
+      <hr class="featurette-divider">
+    </div>
+
+    <!--        Affix-->
+    <div class="col-md-2 col-sm-0 col-xs-0">
+      <nav id="affix-nav">
+        <ul class="nav nav-pills nav-stacked everit-affix" data-spy="affix" data-offset-top="350"
+          data-offset-bottom="140">
+          <li class="active"><a href="#introduction">Introduction</a></li>
+          <li><a href="#eclipse">Eclipse</a></li>
+          <li><a href="#git_and_svn">Git and SVN</a>
+            <ul class="nav nav-pills nav-stacked">
+              <li><a href="#repository_naming_convention">Repository naming convention</a></li>
+              <li><a href="#project_structure_by_repositories">Project structure by
+                  repositories</a></li>
+            </ul></li>
+          <li><a href="#maven">Maven</a>
+            <ul class="nav nav-pills nav-stacked">
+              <li><a href="#gav">GAV</a></li>
+              <li><a href="#deployment_rules">Deployment rules</a></li>
+            </ul></li>
+          <li><a href="#java_version">Java version</a></li>
+          <li><a href="#java_package">Java package</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div></div>
+  <footer class="bs-docs-footer" role="contentinfo">
+    <div class="container">
+      <div class="bs-docs-social">
+        <ul class="bs-docs-social-buttons">
+          <li class="follow-btn "><a href="https://twitter.com/EveritOrg"
+            class="twitter-follow-button" data-show-count="true">Follow @EveritOrg</a></li>
+          <li class="tweet-btn"><a href="https://twitter.com/share"
+            class="twitter-share-button" data-url="http://www.everit.org/">Tweet</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="http://www.everit.org/js/jquery-2.1.1.min.js"></script>
+  <script src="http://www.everit.org/js/bootstrap.min.js"></script>
+  <script src="http://www.everit.org/js/everit.js "></script>
+  <script type="text/javascript">
+      (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+            : 'http://www')
+            + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  <script src="http://www.everit.org/js/prettify/run_prettify.js"></script>
+</body>
+
+</html>
