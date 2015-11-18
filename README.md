@@ -1,4 +1,4 @@
 coding-conventions
 ==================
 
-Documentation: http://wwww.everit.org/coding-conventions
+Documentation: http://www.everit.org/coding-conventions
