@@ -22,7 +22,7 @@
     This configuration file was written by the eclipse-cs plugin configuration editor
 -->
 <!--
-    Checkstyle-Configuration: everit-checkstyle_10.0.0
+    Checkstyle-Configuration: everit-checkstyle_10.0.1
     Description: none
 -->
 <module name="Checker">
@@ -110,7 +110,6 @@
     <module name="HideUtilityClassConstructor"/>
     <module name="InterfaceIsType"/>
     <module name="ArrayTypeStyle"/>
-    <module name="FinalParameters"/>
     <module name="TodoComment"/>
     <module name="UpperEll"/>
     <module name="LineLength">
