@@ -22,15 +22,13 @@
     This configuration file was written by the eclipse-cs plugin configuration editor
 -->
 <!--
-    Checkstyle-Configuration: everit-checkstyle_10.0.1
+    Checkstyle-Configuration: everit
     Description: none
 -->
 <module name="Checker">
   <property name="severity" value="warning"/>
   <module name="TreeWalker">
-    <property name="tabWidth" value="4"/>
     <module name="JavadocMethod">
-      <property name="minLineCount" value="2"/>
       <property name="allowedAnnotations" value="Override, Test"/>
       <property name="scope" value="package"/>
       <property name="allowUndeclaredRTE" value="true"/>
@@ -112,10 +110,6 @@
     <module name="ArrayTypeStyle"/>
     <module name="TodoComment"/>
     <module name="UpperEll"/>
-    <module name="LineLength">
-      <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://|@link|@value|// CS_DISABLE_LINE_LENGTH"/>
-      <property name="max" value="100"/>
-    </module>
     <module name="IllegalThrows"/>
     <module name="Regexp">
       <property name="format" value="System\.out\.print"/>
@@ -189,6 +183,10 @@
       <property name="onCommentFormat" value="CHECKSTYLE.ON\: ([\w\|]+)"/>
       <property name="checkFormat" value="$1"/>
     </module>
+  </module>
+  <module name="LineLength">
+    <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://|@link|@value|// CS_DISABLE_LINE_LENGTH"/>
+    <property name="max" value="100"/>
   </module>
   <module name="Translation"/>
   <module name="FileLength"/>
